@@ -1,1 +1,1 @@
-web: uvicorn api:HRapp 
+web: uvicorn HRapp:api
