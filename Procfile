@@ -1,1 +1,1 @@
-web: uvicorn HRapp:api --reload
+web: uvicorn api:HRapp 
