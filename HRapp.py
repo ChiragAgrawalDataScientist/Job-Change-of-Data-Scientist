@@ -36,9 +36,10 @@ api = FastAPI()
     #             "company_type : Type of current employer [Pvt Ltd, Funded Startup, Public Sector, Early Stage Startup, NGO, Other]"
     #             "lastnewjob: Difference in years between previous job and current job [>4 for more than 4 years]"
     #             "training_hours: training hours completed"
-
-pickle_in = open("EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle", "rb")
-classifier = pickle.load(pickle_in)
+try:
+    pickle_in = open("EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle", "rb")
+except (pickle.UnpicklingError):
+    classifier = pickle.load(pickle_in)
 
 
 # 3. Index route, opens automatically on http://127.0.0.1:8000
