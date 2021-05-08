@@ -25,24 +25,12 @@ class FeaturesIN(BaseModel):
 
 
 api = FastAPI()
-    # description="city_ development _index : Developement index of the city (scaled)"
-    #             "gender: Gender of candidate [Male, Female, Other]"
-    #             "relevent_experience: Relevant experience of candidate [No relevent experience, Has relevent Experience]"
-    #             "enrolled_university: Type of University course enrolled if any[no_enrollment, Full time course, Part time course, "
-    #             "education_level: Education level of candidate [Graduate, Masters, High School, Phd, Primary School]"
-    #             "major_discipline :Education major discipline of candidate [STEM, Humanities, Other, Business Degree, Arts, No Major"
-    #             "experience: Total Experience of Candidate [<1 :- for less than 1 year, >20 :- for more than 20 years]"
-    #             "company_size: No of employees in current employer's company [Enter in below given range : <10 for less than 10, 50-99, 100-500, 500-999, 1000-4999, 5000-9999, 10000+ for more than 10000"
-    #             "company_type : Type of current employer [Pvt Ltd, Funded Startup, Public Sector, Early Stage Startup, NGO, Other]"
-    #             "lastnewjob: Difference in years between previous job and current job [>4 for more than 4 years]"
-    #             "training_hours: training hours completed"
+
 try:
     pickle_in = open("EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle", "rb")
 except (pickle.UnpicklingError):
     classifier = pickle.load(pickle_in)
 
-
-# 3. Index route, opens automatically on http://127.0.0.1:8000
 
 @api.post('/predict_job_change')
 def predict(data1: FeaturesIN):
