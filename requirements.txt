@@ -1,0 +1,15 @@
+pandas==1.2.4
+matplotlib==3.4.1
+numpy==1.20.2
+fastapi==0.63.0
+imbalanced-learn==0.8.0
+imblearn==0.0
+scikit-learn==0.24.2
+seaborn==0.11.1
+uvicorn==0.13.4
+lightgbm==3.2.1
+sklearn==0.0
+eli5==0.11.0
+git-lfs==1.6
+pydantic==1.8.1
+
