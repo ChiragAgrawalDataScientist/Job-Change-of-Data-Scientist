@@ -26,10 +26,8 @@ class FeaturesIN(BaseModel):
 
 api = FastAPI()
 
-try:
-    pickle_in = open("EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle", "rb")
-except (pickle.UnpicklingError):
-    classifier = pickle.load(pickle_in)
+pickle_in = open("EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle", "rb")
+classifier = pickle.load(pickle_in)
 
 
 @api.post('/predict_job_change')
