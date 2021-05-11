@@ -7,48 +7,42 @@ LinkedIn :- www.linkedin.com/in/chirag-agrawal-0bb939182/ <br>
 Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
 
 ## Table of Contents
-<details>
-<summary>Show/Hide</summary>
-<br>
 
 1. [ Files Description ](#File_Description)
+   - 1.1. [ Data ](#Data)
+   - 1.2. [ Jupyter Notebooks ](#Jupyter Notebooks)
 2. [ Technologies used ](#Technologies_Used)
 3. [ Structure of Notebook ](#Structure_of_Notebook)
-</details>
 
 ## Files Description
-<details>
  <a name="File_Description"></a>
- <summary>Show/Hide</summary>
- <br>
- ### Data
- <details>
- <a name="Data"></a>
-  
-- <strong> aug_train.csv </strong> :-  The initial training data I downloaded from Kaggle.com. <br>
-- <strong> Cleaning_and_MICE_Imputation.csv </strong> :- Here I have cleaned the data, cleaned some human error, Label Encoded the data and performed Missing Value Imputation which is a multiple                                          column imputation nd it is generally better than single column imputation.<br>
-- <strong> cleaned_train_data.csv </strong> :-  Cleaned aug_train data after MICE Imputation used for missing value imputation<br>
-
-- <strong> X.csv </strong> :-        After splitting training data into X and y, I converted X part into csv format. This includes all the independent features(columns).<br>
-- <strong> y.csv </strong> :-        After splitting training data into X and y, I converted y part into csv format. This includes dependent feature(target column).<br>
-- <strong> X_train.csv </strong> :-  X is divided into two parts one part is X_train which includes the 75% of X data for training the model.<br>
-- <strong> X_test.csv </strong>  :-  X is divided into two parts another part is X_test which includes the 25% of X data for validating the model.<br>
-- <strong> y_train.csv </strong> :-  y is divided into two parts one part is y_train which includes the 75% of y data for training the model.<br>
-- <strong> y_test.csv </strong>  :-  y is divided into two parts another part is y_test which includes the 25% of y data for validating the model.<br>
-
- * Model is fitted on train data i.e. X_train and X_test, using this train data, model tries to find the best score depending on the model and the hyperparameters of the model 
- * Later Model performance is checked on the validation set i.e. X_test and y_test and compared with the result of Training data (data that was fitted in model) 
  
- - <strong> Solving Class Imbalance via SVMSmote and Model Implementation.ipynb </strong> :- This ipynb file solves the class imbalance Problem using SVMSmote which is a variant                                                                                              of Smote but with a working of SVM. After applying SVMSmote, I implemented the                                                                                                    EasyEnsembleClassifier Machine Learning Model from imblearn library. This                                                                                                        Classification model too can also perform oversampling/undersampling. 
- - <strong> X_svm_smote.csv </strong> :- This is similar to X.csv but after applying SVMSmote <br>
- - <strong> y_svm_smote.csv </strong> :- This is similar to y.csv but after applying SVMSmote <br>
- - <strong> X_train_svm_smote.csv </strong> :- This is similar to X_train.csv but after applying SVMSmote means it is an oversampled data <br>
- - <strong> X_test_svm_smote.csv </strong> :- This is similar to X_test.csv but after applying SVMSmote means it is an oversampled data <br>
- - <strong> y_train_svm_smote.csv </strong> :- This is similar to y_train.csv but after applying SVMSmote means it is an oversampled data <br>
- - <strong> y_test_svm_smote.csv </strong> :- This is similar to y_test.csv but after applying SVMSmote means it is an oversampled data <br>
- - <strong> svm_smote_spplied_train_data.csv </strong> :- After applying SVMSmote and joing X_svm_smote & y_svm_smote we get a new dataframe which is saved as csv <br>
- </details>
- </details>
+ ### [Data](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/tree/master/Data)
+ <a name="Data"></a>
+- [aug_train.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/aug_train.csv) :- The initial training data I downloaded from Kaggle.com. <br>
+- [aug_test_data](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/aug_test.csv) :- This is initial test data I downloaded from Kaggle.com. <br>
+- [X.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X.csv) :- After splitting training data into X and y, I converted X part into csv format. This includes all the independent features(columns).<br>
+- [y.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y.csv) :- After splitting training data into X and y, I converted y part into csv format. This includes dependent feature(target column).<br>
+- [X_train.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X_train.csv) :-  X is divided into two parts one part is X_train which includes the 75% of X data for training the model.<br>
+- [X_test.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X_test.csv) :-  X is divided into two parts another part is X_test which includes the 25% of X data for validating the model.<br>
+- [y_train.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y_train.csv) :-  y is divided into two parts one part is y_train which includes the 75% of y data for training the model.<br>
+- [y_test.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y_test.csv) :-  y is divided into two parts another part is y_test which includes the 25% of y data for validating the model.<br>
+ 
+ - [X_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X_svm_smote.csv) :- This is similar to X.csv but after applying SVMSmote <br>
+ - [y_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y_svm_smote.csv) :- This is similar to y.csv but after applying SVMSmote <br>
+ - [X_train_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X_train_svm_smote.csv) :- This is similar to X_train.csv but after applying SVMSmote means it is an oversampled data <br>
+ - [X_test_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/X_test_svm_smote.csv) :- This is similar to X_test.csv but after applying SVMSmote means it is an oversampled data <br>
+ - [y_train_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y_train_svm_smote.csv) :- This is similar to y_train.csv but after applying SVMSmote means it is an oversampled data <br>
+ - [y_test_svm_smote.csv](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/y_test_svm_smote.csv) :- This is similar to y_test.csv but after applying SVMSmote means it is an oversampled data <br>
+ - [cleaned_train_data](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/cleaned_train_data.csv) :- This is a cleaned train data obtain after MICE Imputation. <br>
+ 
+ ### [Jupyter Notebooks](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/tree/master/Jupyter%20notebooks)
+ <a name="Jupyter Notebooks"></a>
+ 
+ - [Solving Class Imbalance via SVMSmote and Model Implementation.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Solving_Class_Imbalance_via_SVMSmote_and_Model_Implementation.ipynb) :-  This ipynb file solves the class imbalance Problem using SVMSmote which is a variant of Smote but with a working of SVM. After applying SVMSmote, I implemented the EnsembleClassifier Machine Learning Model from imblearn library. This  Classification model too can also perform oversampling/undersampling. 
+ - [Cleaning_and_MICE_Imputation.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Cleaning_and_MICE_Imputation.ipynb) :- Here I have cleaned the data, cleaned some human error, Label Encoded the data and performed Missing Value Imputation which is a multiple column imputation nd it is generally better than single column imputation.<br>
+- [Models and Tuning.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Models_and_Tuning.ipynb) :- I have tuned different models and selected the final model with highest f1 score.<br>
+- [Complete code with final model.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Complete_code_with_final_model.ipynb) :- This is the complete combined code in jupyter notebook with selected final model.<br>
  
 ## Technologies Used
 <details> 
