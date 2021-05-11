@@ -22,7 +22,9 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
  <summary>Show/Hide</summary>
  <br>
  ### Data
+ <details>
  <a name="Data"></a>
+  
 - <strong> aug_train.csv </strong> :-  The initial training data I downloaded from Kaggle.com. <br>
 - <strong> Cleaning_and_MICE_Imputation.csv </strong> :- Here I have cleaned the data, cleaned some human error, Label Encoded the data and performed Missing Value Imputation which is a multiple                                          column imputation nd it is generally better than single column imputation.<br>
 - <strong> cleaned_train_data.csv </strong> :-  Cleaned aug_train data after MICE Imputation used for missing value imputation<br>
@@ -45,6 +47,7 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
  - <strong> y_train_svm_smote.csv </strong> :- This is similar to y_train.csv but after applying SVMSmote means it is an oversampled data <br>
  - <strong> y_test_svm_smote.csv </strong> :- This is similar to y_test.csv but after applying SVMSmote means it is an oversampled data <br>
  - <strong> svm_smote_spplied_train_data.csv </strong> :- After applying SVMSmote and joing X_svm_smote & y_svm_smote we get a new dataframe which is saved as csv <br>
+ </details>
  </details>
  
 ## Technologies Used
