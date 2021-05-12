@@ -10,9 +10,9 @@ from sklearn.model_selection import train_test_split as tts
 from sklearn.metrics import classification_report, confusion_matrix, recall_score, f1_score, precision_score, \
     roc_auc_score, roc_curve, auc
 from lightgbm.sklearn import LGBMClassifier
-# import six
-# import sys
-# sys.modules['sklearn.externals.six'] = six
+import six
+import sys
+sys.modules['sklearn.externals.six'] = six
 from imblearn.over_sampling import SMOTENC, SMOTE, BorderlineSMOTE, ADASYN, SVMSMOTE
 from imblearn.ensemble import EasyEnsembleClassifier
 import eli5
@@ -127,48 +127,5 @@ plt.yticks(fontsize=15)
 sns.barplot(x='importance', y='feature', data=feature_importance_with_eli5,
             order=feature_importance_with_eli5.sort_values('importance', ascending=False).feature)
 
-# # TEST DATA
-# missing_values = ["n/a", "na", "--", "NONE", "None", "none", "NA", "N/A", 'inf', '-inf', '?', 'Null', 'NULL']
-# test_data = pd.read_csv('aug_test.csv', na_values=missing_values)
-# test_data.drop(['enrollee_id', 'city'], 1, inplace=True)
-# test_data.head()
-#
-# print(test_data.company_size.value_counts())
-# test_data['company_size'] = test_data['company_size'].replace('10/49', np.nan)
-# print("==============================")
-# print(test_data.company_size.value_counts())
-#
-# to_LabelEncode_test = test_data[['gender', 'relevent_experience',
-#                                  'enrolled_university', 'education_level', 'major_discipline',
-#                                  'experience', 'company_size', 'company_type', 'last_new_job']]
-#
-# test_temp = to_LabelEncode_test.astype("str").apply(le.fit_transform)
-# test_final = test_temp.where(~to_LabelEncode_test.isna(), to_LabelEncode_test)
-#
-# test_data.drop(['gender', 'relevent_experience', 'enrolled_university', 'education_level',
-#                 'major_discipline', 'experience', 'company_size', 'company_type', 'last_new_job'], 1, inplace=True)
-#
-# test_data = test_final.join(test_data)
-#
-# test_final_df = mice_imputer.fit_transform(test_data)
-#
-# test_final_df = pd.DataFrame(test_final_df)
-# test_final_df.columns = ['gender', 'relevent_experience', 'enrolled_university', 'education_level', 'major_discipline',
-#                          'experience', 'company_size', 'company_type', 'last_new_job', 'city_development_index',
-#                          'training_hours']
-#
-# print(test_final_df)
-#
-# final_test = test_final_df.copy()
-#
-# final_test_data = sc.transform(final_test)
-#
-# prediction = easy_lgbm.predict(final_test_data)
-#
-# threshold = 0.5
-# my_pred = np.where(prediction > threshold, 'Will join the company', 'Will not join the company')
-#
-# my_pred = my_pred.T.reshape(-1, 1)
-# my_pred = pd.DataFrame(my_pred, columns=['Decision'])
 
 pickle.dump(easy_lgbm, open('EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle', 'wb'))
