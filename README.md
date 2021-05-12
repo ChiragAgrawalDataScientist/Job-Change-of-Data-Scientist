@@ -55,20 +55,24 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
  
 ## Technologies Used 
  <a name="Technologies_Used"></a>
-1. Python <br>
-2. NumPy <br>
-3. MatplotLib <br>
-4. Seaborn <br>
-5. scikit-learn <br>
-6. imblearn <br>
-7. eli5 (for Feature Importance of model) <br>
-8. pickle <br>
-</details>
+1. pandas==1.2.4 <br>
+2. matplotlib==3.4.1 <br>
+3. numpy==1.20.2 <br>
+4. fastapi==0.63.0 <br>
+5. imbalanced-learn==0.8.0 <br>
+6. imblearn==0.0 <br>
+7. scikit-learn==0.24.2 <br>
+8. seaborn==0.11.1 <br>
+9. uvicorn==0.13.4 <br>
+10. lightgbm==3.2.1 <br>
+11. sklearn==0.0 <br>
+12. eli5==0.11.0 <br>
+13. git-lfs==1.6 <br>
+14. pydantic==1.8.1 <br>
+
 
 ## Structure of Notebook
-<details>
  <a name="Structure_of_Notebook"></a>
- <summary>Show/Hide</summary>
 1. Cleaning and MICE Imputation<br>
    - 1.1 Imports<br>
    - 1.2 Deleting unwanted columns<br>
@@ -90,5 +94,9 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
    - 2.9 Applying EasyEnsembleClassifier Machine Learning Model <br>
    - 2.10 Printing f1 score and Feature Importance according to the model using permutation importance of eli5 library <br>
    - 2.11 Pickling the Model <br>
-
+3. Models and Tuning <br>
+   - 3.1 Import Libraries <br>
+   - Oversampling via SvmSmote <br>
+   - Applied 13 variants of 3 different models and finalized the one with highest f1_score.
+   - Checked the Feature Importance according to the model.
  
