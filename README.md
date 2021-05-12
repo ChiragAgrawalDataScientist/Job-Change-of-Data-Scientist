@@ -10,7 +10,8 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
 
 1. [ Files Description ](#File_Description)
    - 1.1. [ Data ](#Data)
-   - 1.2. [ Jupyter Notebooks ](#Jupyter Notebooks)
+   - 1.2. [ Jupyter Notebooks ](#Jupyter_Notebooks)
+   - 1.3. [ Other Important Files ](#Other_Important_Files)
 2. [ Technologies used ](#Technologies_Used)
 3. [ Structure of Notebook ](#Structure_of_Notebook)
 
@@ -37,17 +38,23 @@ Medium :- https://chiragagrawaldatascientist.medium.com/ <br>
  - [cleaned_train_data](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Data/cleaned_train_data.csv) :- This is a cleaned train data obtain after MICE Imputation. <br>
  
  ### [Jupyter Notebooks](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/tree/master/Jupyter%20notebooks)
- <a name="Jupyter Notebooks"></a>
+ <a name="Jupyter_Notebooks"></a>
  
  - [Solving Class Imbalance via SVMSmote and Model Implementation.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Solving_Class_Imbalance_via_SVMSmote_and_Model_Implementation.ipynb) :-  This ipynb file solves the class imbalance Problem using SVMSmote which is a variant of Smote but with a working of SVM. After applying SVMSmote, I implemented the EnsembleClassifier Machine Learning Model from imblearn library. This  Classification model too can also perform oversampling/undersampling. 
  - [Cleaning_and_MICE_Imputation.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Cleaning_and_MICE_Imputation.ipynb) :- Here I have cleaned the data, cleaned some human error, Label Encoded the data and performed Missing Value Imputation which is a multiple column imputation nd it is generally better than single column imputation.<br>
 - [Models and Tuning.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Models_and_Tuning.ipynb) :- I have tuned different models and selected the final model with highest f1 score.<br>
 - [Complete code with final model.ipynb](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/Jupyter%20notebooks/Complete_code_with_final_model.ipynb) :- This is the complete combined code in jupyter notebook with selected final model.<br>
+
+### [Other Important Files](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist)
+<a name="Other_Important_Files"></a>
+
+- [EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/EasyEnsembleClassifier_with_LGBMClassifier_as_base_estimator.pickle) :- This is a final model pickle file.<br>
+- [HRmodel.py](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/HRmodel.py) :- This is same as "file Complete Code with final model.ipynb" but I have used FastAPI for the deployement using Pycharm, so I just created a .py file with same code.<br>
+- [HRapp.py](https://github.com/ChiragAgrawalDataScientist/Job-Change-of-Data-Scientist/blob/master/HRapp.py) :- This is an app file used for deployement created using FastAPI library.<br>
+
  
-## Technologies Used
-<details> 
+## Technologies Used 
  <a name="Technologies_Used"></a>
- <summary>Show/Hide</summary>
 1. Python <br>
 2. NumPy <br>
 3. MatplotLib <br>
